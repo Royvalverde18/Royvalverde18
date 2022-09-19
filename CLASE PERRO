@@ -1,0 +1,42 @@
+public class ejercicio3 {
+    public static String[] generarNombresAleatorios(int cantidad) {
+		String[] nombresAleatorios = new String[cantidad];
+
+		String[] nombres = { "DRACO", "CRASH", "FIRULAIS", "PRINCESA", "BLANCA", "MOZIT", "MACHIN", "TOBI", "PINKI"};
+
+		for (int i = 0; i < cantidad; i++) {
+			nombresAleatorios[i] = nombres[(int) (Math.floor(Math.random() * ((nombres.length - 1) - 0 + 1) + 0))] + " ";
+		}
+		return nombresAleatorios;
+    }
+    public static void imprimir(String[] nombresgenerados){
+        for (String nombresgenerado : nombresgenerados) {
+            System.out.println("nombre del perro es: "+ nombresgenerado);
+        }
+    }
+    public static String[] generarsexoaleatorio(int ncantidad) {
+		String[] sexoAleatorio = new String[ncantidad];
+
+		String[] sexos = {"macho", "hembra"};
+
+		for (int i = 0; i < ncantidad; i++) {
+			sexoAleatorio[i] = sexos[(int) (Math.floor(Math.random() * ((sexos.length - 1) - 0 + 1) + 0))] + " ";
+		}
+		return sexoAleatorio;
+    }
+    public static void imprimirs(String[] sexosgenerados){
+        for (String sexosgenerado : sexosgenerados) {
+            System.out.println("de sexo: " + sexosgenerado);
+        }
+    }
+    
+    public static void main(String[] args){
+    
+        Perro p[] = new Perro[10];
+        for(int i=0;i<p.length;i++){
+            System.out.println(i+1);
+           imprimir(generarNombresAleatorios(1));
+           imprimirs(generarsexoaleatorio(1));
+        }
+    }
+}
